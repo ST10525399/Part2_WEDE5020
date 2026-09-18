@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enquiry | Heritage &amp; Hand Carpentry</title>
+  <meta name="description" content="Request a quote or ask about our carpentry services.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">Heritage &amp; Hand</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation">Menu</button>
+      <nav class="main-nav" id="primary-navigation" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="enquiry.html" aria-current="page">Enquiry</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="container">
+        <p class="section-eyebrow">Enquiry</p>
+        <h1>Request a quote</h1>
+        <p>Fill out the form below to tell us about your project requirements and get an estimated quote.</p>
+
+        <form data-form novalidate>
+          <div class="form-row">
+            <label for="name">Full name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-row">
+            <label for="phone">Phone number</label>
+            <input type="tel" id="phone" name="phone">
+          </div>
+
+          <div class="form-row">
+            <label for="project-type">Type of project</label>
+            <select id="project-type" name="project-type" required>
+              <option value="" disabled selected>Select an option...</option>
+              <option value="furniture">Custom furniture</option>
+              <option value="cabinetry">Fitted cabinetry</option>
+              <option value="repair">Repair &amp; restoration</option>
+              <option value="outdoor">Decking / outdoor structure</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="message">Tell us about your project</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+
+          <button type="submit" class="btn">Send Enquiry</button>
+          <p class="form-status" role="status">Thank you for your enquiry! We will get back to you within 24-48 hours.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Heritage &amp; Hand Carpentry. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
